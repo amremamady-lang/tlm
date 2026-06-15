@@ -1,0 +1,4 @@
+# Statische site — geen build nodig (alles via CDN, hash-routing)
+[build]
+  publish = "."
+  command = ""
