@@ -1408,10 +1408,19 @@ function HomePage({ navigate }) {
   return (
     <div className="page-enter">
       {/* HERO */}
-      <section className="relative pt-40 pb-24 md:pt-48 md:pb-32">
+      <section className="relative pt-40 pb-24 md:pt-48 md:pb-32 overflow-hidden">
+        {/* achtergrond-video (loop, muted) — toont de poster-foto tot hero.mp4 bestaat */}
+        <div className="absolute inset-0 z-0" aria-hidden="true">
+          <video className="w-full h-full object-cover" autoPlay muted loop playsInline preload="metadata"
+                 poster="assets/work/img18.jpg?v=2">
+            <source src="assets/hero.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0" style={{ background: "linear-gradient(95deg, var(--bg) 6%, color-mix(in srgb, var(--bg) 82%, transparent) 46%, color-mix(in srgb, var(--bg) 42%, transparent) 100%)" }}></div>
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, color-mix(in srgb, var(--bg) 55%, transparent), transparent 22%, transparent 60%, var(--bg) 100%)" }}></div>
+        </div>
+
         <div className="container-tlm relative z-10">
-          <div className="grid items-center gap-10 lg:gap-12 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             <div className="reveal in flex items-center gap-3 mb-7">
               <span className="block w-8 h-0.5 rounded bg-[var(--accent)]"></span>
               <span className="eyebrow">{b.tagline} · {b.country}</span>
@@ -1428,18 +1437,6 @@ function HomePage({ navigate }) {
               <Button href="#/diensten" variant="primary">Bekijk onze diensten</Button>
               <Button href="#/realisaties" variant="ghost">Realisaties</Button>
             </div>
-          </div>
-
-          <Reveal delay={140}>
-            <div className="relative">
-              <div className="absolute inset-0 -z-10 blur-3xl opacity-60" aria-hidden="true"
-                   style={{ background: "radial-gradient(circle at 58% 45%, color-mix(in srgb, var(--accent) 38%, transparent), transparent 70%)" }}></div>
-              <img src="assets/hero.png"
-                   alt="TLM Construct — TIG-lassen, LED-verlichting en metaalconstructie voor auto en truck"
-                   className="w-full h-auto select-none"
-                   style={{ filter: "drop-shadow(0 24px 60px rgba(0,0,0,0.55))" }} />
-            </div>
-          </Reveal>
           </div>
 
           {/* three pillars */}
