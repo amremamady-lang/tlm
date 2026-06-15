@@ -8,6 +8,61 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="theme-color" content="#0A0C10" />
 
+  <!-- SEO -->
+  <link rel="canonical" href="https://tlmconstruct.netlify.app/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="TLM Construct" />
+  <meta name="keywords" content="TIG-lassen, metaalconstructie, LED verlichting, ambient verlichting, auto, truck, Volvo, DAF, Scania, BMW, Porsche, offroad, Lokeren, België, garage, service center" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TLM Construct" />
+  <meta property="og:locale" content="nl_BE" />
+  <meta property="og:title" content="TLM Construct, Official Registered Service Center" />
+  <meta property="og:description" content="Gespecialiseerd auto- &amp; truck-atelier. TIG-lassen, LED-verlichting en metaalconstructie op maat in België." />
+  <meta property="og:url" content="https://tlmconstruct.netlify.app/" />
+  <meta property="og:image" content="https://tlmconstruct.netlify.app/assets/work/img01.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TLM Construct, Official Registered Service Center" />
+  <meta name="twitter:description" content="Gespecialiseerd auto- &amp; truck-atelier. TIG-lassen, LED-verlichting en metaalconstructie op maat in België." />
+  <meta name="twitter:image" content="https://tlmconstruct.netlify.app/assets/work/img01.jpg" />
+
+  <!-- Structured data: lokaal bedrijf -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "TLM Construct",
+    "description": "Gespecialiseerd auto- & truck-atelier. TIG-lassen, LED-verlichting en metaalconstructie op maat in België.",
+    "image": "https://tlmconstruct.netlify.app/assets/work/img01.jpg",
+    "logo": "https://tlmconstruct.netlify.app/favicon.svg",
+    "url": "https://tlmconstruct.netlify.app/",
+    "telephone": "+32471931879",
+    "email": "info@tlmconstruct.be",
+    "vatID": "BE 1008 481 878",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sint-Jozefstraat 17",
+      "postalCode": "9160",
+      "addressLocality": "Lokeren",
+      "addressCountry": "BE"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:30", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
+    ],
+    "sameAs": ["https://instagram.com/tlm_construct"],
+    "areaServed": "BE",
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "TIG-lassen" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "LED & ambient verlichting" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Metaalconstructie op maat" } }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700&family=Archivo:wght@600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -1254,8 +1309,12 @@ function Navbar({ route }) {
               <a key={n.to} href={n.to} className={`navlink ${n.match(route) ? "active" : ""}`}>{n.label}</a>
             ))}
           </nav>
-          <div className="hidden lg:block">
-            <Button href="#/contact" variant="primary" icon="arrow" className="!py-2.5 !px-5 text-sm">Contacteren</Button>
+          <div className="hidden lg:flex items-center gap-3">
+            <a href={window.TLM.business.instagramUrl} target="_blank" rel="noreferrer"
+               className="btn btn-ghost !py-2.5 !px-5 text-sm inline-flex items-center gap-2">
+              <Icon name="instagram" size={18} /> Instagram
+            </a>
+            <Button href="#/contact" variant="primary" className="!py-2.5 !px-5 text-sm">Contacteren</Button>
           </div>
           <button className="lg:hidden text-white px-3 py-2 rounded-lg hover:bg-white/5 font-display font-semibold text-sm tracking-wide" onClick={() => setOpen((v) => !v)} aria-label="Menu">
             {open ? "Sluit" : "Menu"}
@@ -1271,6 +1330,10 @@ function Navbar({ route }) {
                 {n.label}
               </a>
             ))}
+            <a href={window.TLM.business.instagramUrl} target="_blank" rel="noreferrer"
+               className="btn btn-ghost mt-2 justify-center inline-flex items-center gap-2">
+              <Icon name="instagram" size={18} /> Bekijk ons op Instagram
+            </a>
             <Button href="#/contact" variant="primary" className="mt-2 justify-center">Contacteren</Button>
           </div>
         </div>
