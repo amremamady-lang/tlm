@@ -1784,35 +1784,13 @@ function HomePage({
   return /*#__PURE__*/React.createElement("div", {
     className: "page-enter"
   }, /*#__PURE__*/React.createElement("section", {
-    className: "relative pt-40 pb-24 md:pt-48 md:pb-32 overflow-hidden"
+    className: "relative pt-40 pb-24 md:pt-48 md:pb-32"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "absolute inset-0 z-0",
-    "aria-hidden": "true"
-  }, /*#__PURE__*/React.createElement("video", {
-    className: "w-full h-full object-cover",
-    autoPlay: true,
-    muted: true,
-    loop: true,
-    playsInline: true,
-    preload: "metadata",
-    poster: "assets/work/img18.jpg?v=2"
-  }, /*#__PURE__*/React.createElement("source", {
-    src: "assets/hero.mp4",
-    type: "video/mp4"
-  })), /*#__PURE__*/React.createElement("div", {
-    className: "absolute inset-0",
-    style: {
-      background: "linear-gradient(95deg, var(--bg) 2%, color-mix(in srgb, var(--bg) 66%, transparent) 42%, color-mix(in srgb, var(--bg) 22%, transparent) 100%)"
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "absolute inset-0",
-    style: {
-      background: "linear-gradient(to bottom, color-mix(in srgb, var(--bg) 38%, transparent), transparent 20%, transparent 64%, var(--bg) 100%)"
-    }
-  })), /*#__PURE__*/React.createElement("div", {
     className: "container-tlm relative z-10"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "max-w-3xl"
+    className: "grid items-center gap-8 lg:gap-10 lg:grid-cols-[0.9fr_1.1fr]"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "max-w-2xl"
   }, /*#__PURE__*/React.createElement("div", {
     className: "reveal in flex items-center gap-3 mb-7"
   }, /*#__PURE__*/React.createElement("span", {
@@ -1837,7 +1815,24 @@ function HomePage({
   }, "Bekijk onze diensten"), /*#__PURE__*/React.createElement(Button, {
     href: "#/realisaties",
     variant: "ghost"
-  }, "Realisaties"))), /*#__PURE__*/React.createElement("div", {
+  }, "Realisaties"))), /*#__PURE__*/React.createElement(Reveal, {
+    delay: 140
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "relative lg:scale-105"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "absolute inset-0 -z-10 blur-3xl opacity-70",
+    "aria-hidden": "true",
+    style: {
+      background: "radial-gradient(circle at 55% 45%, color-mix(in srgb, var(--accent) 40%, transparent), transparent 70%)"
+    }
+  }), /*#__PURE__*/React.createElement("img", {
+    src: "assets/hero.png",
+    alt: "TLM Construct \u2014 TIG-lassen, LED-verlichting en metaalconstructie voor auto en truck",
+    className: "w-full h-auto select-none",
+    style: {
+      filter: "drop-shadow(0 24px 60px rgba(0,0,0,0.55))"
+    }
+  })))), /*#__PURE__*/React.createElement("div", {
     className: "mt-20 grid gap-5 md:grid-cols-3"
   }, pillarMeta.map((p, i) => /*#__PURE__*/React.createElement(Reveal, {
     key: p.title,
